@@ -1,0 +1,145 @@
+.container{
+    background-color: #d4d4d4;
+}
+
+/*cabecera*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    border-bottom: solid 1px #b6b6b6;
+    background-color: #fff;
+}
+
+.addProj{
+    background-color: #ff0000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.addProj:hover{
+    background-color: #bc0e0e;
+}
+
+
+/*lista de proyectos*/
+
+.projectsList{
+    margin-top: 20px;
+}
+
+
+
+
+
+.managerCont,
+.assignedCont{
+    display: flex;
+    align-items: center;
+}
+
+.infoHeaders,
+.managerCont,
+.statusView{
+    display: none;
+}
+
+.profilePicManager, .profilePicAssigned{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.contButton {
+    position: relative;
+    
+}
+
+.points{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+
+.pointsOption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.buttonEdit,
+.buttonDelete{
+    background-color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buttonEdit{
+    border-bottom: solid 1px #b6b6b6;
+    border-radius: 4px 4px 0 0 ;
+}
+
+.buttonDelete{
+    border-radius: 0 0 4px 4px;
+}
+
+.buttonEdit:hover,
+.buttonDelete:hover{
+    background-color: #b6b6b6;
+}
+
+
+@media screen and (max-width:959px) {
+    .proj{
+        background-color: #fff;
+        padding: 10px 40px 0 40px;
+        display: grid;
+        grid-template-areas: 
+            "nameProject contButton"
+            "assignedCont contButton";
+        grid-template-columns: 1fr auto;
+        grid-gap: 10px;
+        border-bottom: solid 1px #b6b6b6;
+    }
+    
+    .nameProject{
+        grid-area: nameProject;
+    }
+    
+    .assignedCont{
+        grid-area: assignedCont;
+        margin-bottom: 5px;
+    }
+
+    .contButton{
+        grid-area: contButton;
+    }
+
+    .pointsOption{
+        width: 80px;
+        margin-right: 50px;
+    }
+}

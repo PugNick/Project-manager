@@ -1,0 +1,51 @@
+.containerAdd{
+    background-color: #d4d4d4;
+}
+
+.headerAdd{
+    display: flex;
+    border-bottom: solid 1px #b6b6b6;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.buttonBack{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.inputContainer{
+    margin-top: 15px;
+    background-color: #fff;
+}
+
+.titleInput{
+    padding: 10px 20px 5px 20px;
+}
+
+.input{
+    padding: 0 20px 10px 20px;
+}
+
+.insideInput{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: solid 1px #e5e5e5;
+}
+
+#buttonCreate{
+    background-color: #ff0000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+    margin: 0 0 20px 20px;
+}
+
+#buttonCreate:hover{
+    background-color: #bc0e0e;
+}

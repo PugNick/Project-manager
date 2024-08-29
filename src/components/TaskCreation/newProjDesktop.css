@@ -1,0 +1,92 @@
+@media screen and (min-width: 960px) {
+    
+    .infoHeaders,
+    .managerCont,
+    .statusView{
+        display: flex;
+}
+
+
+    .infoHeaders{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        padding: 10px 10px;
+        font-weight: bold;
+        font-size: 22px;
+        margin: 20px 30px 0 30px;
+        background-color: #f0f0f0;
+        border-bottom: solid 1px #b6b6b6;
+        height: 70px;
+    }
+
+    .projectsList{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        margin: 0 30px;
+        background-color: #fff;
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
+        
+    }
+
+    .proj{
+        /* display: grid;
+        grid-template-columns: repeat(5, 1fr); */
+        display: contents;
+        
+    }
+
+    .nameProject,
+    .managerCont,
+    .assignedCont,
+    .statusView,
+    .contButton {
+        padding: 10px 10px;
+    }
+
+    .profilePicManager,
+    .profilePicAssigned {
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .contButton{
+        height: 50px;
+    }
+
+    .points{
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .statusView{
+        background-color: #f0f0f0;
+        width: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 1px #cbcbcb;
+        border-radius: 8px;
+        padding: 5px 10px;
+    }
+
+    .action,
+    .status,
+    .statusView{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .buttonEdit,
+    .buttonDelete{
+        margin-right: auto;
+        margin-left: auto;
+        width: 100px;
+        justify-content: center;
+    }
+
+    
+}
