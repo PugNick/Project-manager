@@ -1,15 +1,77 @@
-@media screen and (min-width:960px) {
-    .inputContainer{
-        max-width: 950px;
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 5px;
-        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
-        padding: 30px;
+@media (min-width:1024px) {
+    .containerAddWidth{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    .insideInput{
-        width: 100%;
+    .containerAdd{
+        margin-top: 200px;
+        width: 1024px;
+        padding: 0 20px;
+    }
+
+
+    /*header*/
+    .headerAdd{
+        background: var(--color-header);
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .buttonBack{
+        background: var(--color-boton);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .buttonBack:hover{
+        background: var(--color-boton-hover);
+    }
+
+    /*inputs*/
+    .inputContainer{
+        background: var(--color-tareas);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .inputContainer .titleInput{
+        font-size: 27px;
+        margin: 0;
+    }
+
+    .nameInput input,
+    .nameInput select{
+        border-radius: 8px;
+        border: 1px solid var(--color-header);
+        height: 30px;
+    }
+    
+    .buttonContainerProject button{
+        background: var(--color-boton);
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+
+    .buttonContainerProject button:disabled{
+        background: var(--color-fondo);
+        cursor: not-allowed;
+    }
+
+    .buttonContainerProject button:not(:disabled):hover {
+        background: var(--color-boton-hover);
     }
 }

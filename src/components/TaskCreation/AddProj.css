@@ -1,51 +1,134 @@
-.containerAdd{
-    background-color: #d4d4d4;
+@media (max-width: 767px){
+    .containerAddWidth{
+        min-width: 360px;
+        width: 100%;
+    }
+
+    .containerAdd{
+        padding: 10px;
+    }
+
+    .headerAdd{
+        background: var(--color-header);
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .headerAdd h2{
+        color: #fff;
+    }
+
+    .headerAdd button{
+        background: var(--color-boton);
+        padding: 5px 10px;
+        border: none;
+    }
+
+
+    .inputContainer{
+        background: var(--color-tareas);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .inputContainer .titleInput{
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .nameInput input,
+    .nameInput select{
+        border-radius: 8px;
+        border: 1px solid var(--color-header);
+        height: 30px;
+    }
+    
+    .buttonContainerProject button{
+        background: var(--color-boton);
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+
+    .buttonContainerProject button:disabled{
+        background: var(--color-fondo);
+        cursor: not-allowed;
+    }
+
+    .buttonContainerProject button:not(:disabled):hover {
+        background: var(--color-boton-hover);
+    }
 }
 
-.headerAdd{
-    display: flex;
-    border-bottom: solid 1px #b6b6b6;
-    background-color: #fff;
-    padding: 10px 20px;
-}
 
-.buttonBack{
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-}
+@media (min-width: 768px) and (max-width: 1023px){
+    .containerAddWidth{
+        min-width: 768px;
+        width: 100%;
+        margin-top: 100px;
+    }
 
-.inputContainer{
-    margin-top: 15px;
-    background-color: #fff;
-}
+    .containerAdd{
+        padding: 20px;
+    }
 
-.titleInput{
-    padding: 10px 20px 5px 20px;
-}
+    .headerAdd{
+        background: var(--color-header);
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
 
-.input{
-    padding: 0 20px 10px 20px;
-}
+    .headerAdd h2{
+        color: var(--color-tareas);
+    }
 
-.insideInput{
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: solid 1px #e5e5e5;
-}
+    .headerAdd button{
+        background: var(--color-boton);
+        padding: 10px 15px;
+        border: none;
+    }
 
-#buttonCreate{
-    background-color: #ff0000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    transition: .5s;
-    margin: 0 0 20px 20px;
-}
+    .inputContainer{
+        background: var(--color-tareas);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-#buttonCreate:hover{
-    background-color: #bc0e0e;
+    .inputContainer .titleInput{
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .nameInput input,
+    .nameInput select{
+        border-radius: 8px;
+        border: 1px solid var(--color-header);
+        height: 30px;
+    }
+    
+    .buttonContainerProject button{
+        background: var(--color-boton);
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+
+    .buttonContainerProject button:disabled{
+        background: var(--color-fondo);
+        cursor: not-allowed;
+    }
+
+    .buttonContainerProject button:not(:disabled):hover {
+        background: var(--color-boton-hover);
+    }
 }

@@ -1,145 +1,253 @@
-.container{
-    background-color: #d4d4d4;
-}
+/*mobile*/
 
-/*cabecera*/
+@media (max-width: 767px) {
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    border-bottom: solid 1px #b6b6b6;
-    background-color: #fff;
-}
-
-.addProj{
-    background-color: #ff0000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.addProj:hover{
-    background-color: #bc0e0e;
-}
-
-
-/*lista de proyectos*/
-
-.projectsList{
-    margin-top: 20px;
-}
-
-
-
-
-
-.managerCont,
-.assignedCont{
-    display: flex;
-    align-items: center;
-}
-
-.infoHeaders,
-.managerCont,
-.statusView{
-    display: none;
-}
-
-.profilePicManager, .profilePicAssigned{
-    width: 50px;
-    height: auto;
-    border-radius: 50%;
-}
-
-
-.contButton {
-    position: relative;
-    
-}
-
-.points{
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 0 20px;
-}
-
-
-.pointsOption {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 10;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-.buttonEdit,
-.buttonDelete{
-    background-color: #fff;
-    border: none;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: .3s;
-}
-
-.buttonEdit{
-    border-bottom: solid 1px #b6b6b6;
-    border-radius: 4px 4px 0 0 ;
-}
-
-.buttonDelete{
-    border-radius: 0 0 4px 4px;
-}
-
-.buttonEdit:hover,
-.buttonDelete:hover{
-    background-color: #b6b6b6;
-}
-
-
-@media screen and (max-width:959px) {
-    .proj{
-        background-color: #fff;
-        padding: 10px 40px 0 40px;
-        display: grid;
-        grid-template-areas: 
-            "nameProject contButton"
-            "assignedCont contButton";
-        grid-template-columns: 1fr auto;
-        grid-gap: 10px;
-        border-bottom: solid 1px #b6b6b6;
+    .widthContainer{
+        min-width: 360px;
+        width: 100%;
     }
-    
-    .nameProject{
-        grid-area: nameProject;
+
+    .containerProjects{
+        padding: 10px;
     }
+
     
+    .header{
+        background: var(--color-header);
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+
+    .header h2{
+        color: #fff;
+    }
+
+    .header button{
+        background: var(--color-boton);
+        padding: 5px 10px;
+        border: none;
+    }
+
+
+    .projectsTable {
+        display: none;
+    } 
+
+
+    .projectCardMobile {
+        background: var(--color-tareas);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .cardHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .creationDate {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .cardDetails p {
+        margin: 5px 0;
+    }
+
+    .cardActions {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .cardActions button {
+        flex: 1;
+        padding: 8px;
+        border: none;
+        background: var(--color-boton);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+
+    .pagination{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .pagination button{
+        background: var(--color-boton);
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: .3s;
+    }
+}
+
+
+
+/*tablet*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .projectCardMobile{
+        display: none;
+    }
+
+
+    .widthContainer{
+        min-width: 768px;
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .containerProjects{
+        padding: 20px;
+    }
+
+    .header{
+        background: var(--color-header);
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .header h2{
+        color: #fff;
+    }
+
+    .header button{
+        background: var(--color-boton);
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .projectsTable {
+        width: 100%;
+        background: var(--color-tareas);
+        padding: 20px 20px 0 20px;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .textCenter,
+    .textLeft {
+        padding-bottom: 10px;
+    }
+
+    .textLeft{
+        text-align: left;
+    }
+
+    .textCenter{
+        text-align: center;
+    }
+
+    .projectsTable td{
+        padding: 10px 0;
+        border-top: 2px solid #ccc;
+    }
+
+
+    .nameProject p{
+        font-size: 18px;
+    }
+
+    .managerCont,
     .assignedCont{
-        grid-area: assignedCont;
-        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .imgContainer{
+        width: 50px;
+        height: 50px;
     }
 
     .contButton{
-        grid-area: contButton;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+
+    .points{
+        border: none;
+        background: transparent;
+        width: 30%;
+    }
+
+    .points, .buttonEdit, .buttonDelete{
+        cursor: pointer;
+    }
+
+    .buttonEdit, .buttonDelete{
+        background: var(--color-boton);
+        border: none;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
     }
 
     .pointsOption{
-        width: 80px;
-        margin-right: 50px;
+        animation: fadeInMenu 0.3s ease forwards;
+        position: absolute;
+        top: 40px;
+        right: 50%;
+        transform: translateX(50%);
+        z-index: 100;
+        background: var(--color-boton);
+    }
+
+    .relativeContainer{
+        position: relative;
+        display: flex;
+    }
+
+    .relativeContainer::before{
+        content: '';
+        position: absolute;
+        top: -40px;
+        right: calc(50% - 20px);
+        border-top: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid var(--color-boton);
+        border-left: 20px solid transparent;
+    }
+
+    .relativeContainer::after{
+        content: '';
+        width: 2px;
+        height: 100%;
+        background: var(--color-boton-hover);
+        position: absolute;
+        right: calc(50% - 1px);
+    }
+
+
+    .pagination{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .pagination button{
+        background: var(--color-boton);
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: .3s;
     }
 }
